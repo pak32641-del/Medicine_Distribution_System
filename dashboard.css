@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background: #f4f6f9;
+  color: #333;
+}
+/* ===== Dashboard Page ===== */
+
+.dashboard-container {
+    width: 90%;
+    margin: 50px auto;
+    text-align: center;
+  }
+  
+  .dashboard-container h1 {
+    font-size: 32px;
+    color: #009688;
+    margin-bottom: 10px;
+  }
+  
+  .dashboard-container p {
+    color: #555;
+    margin-bottom: 25px;
+  }
+  
+  .status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  
+.status.pending{
+  background:yellow;
+}
+
+.status.completed,
+.status.delivered{
+  background:rgb(4, 227, 4);
+}
+
+.status.cancelled{
+  background:red;
+}
+  
+  .view-btn {
+    background: #009688;
+    color: white;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .view-btn:hover {
+    background: #00796b;
+  }
+
+.delete-btn{
+    background: rgba(255, 0, 0, 0.918);
+    color: white;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.delete-btn:hover {
+    background: rgb(185, 1, 1);
+  }
+
+  .edit-btn{
+    background: #1976d2;
+    color: white;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.edit-btn:hover {
+    background: #0b5cac;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #009688;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    margin-top: 150px;
+    position: fixed;
+    bottom: o;
+    left: 0;
+    width: 100%;
+    font-size: 19px;
+  }
+
+
+
+/* ===== Order Details Page ===== */
+
+.order-details{
+  max-width: 900px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
+}
+
+/* Heading */
+.order-details h2{
+  text-align: center;
+  font-size: 26px;
+  color: #009688;
+  margin-bottom: 20px;
+}
+
+/* Order Information Text */
+.order-details p{
+  font-size: 16px;
+  color: #333;
+  margin: 6px 0;
+}
+
+.order-details b{
+  color: #000;
+}
+
+/* ===== Order Table ===== */
+.order-table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.order-table th{
+  background: #009688;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.order-table td{
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+  text-align: left;
+  text-decoration: none;
+}
+
+
+/* Zebra Row */
+.order-table tr:nth-child(even){
+  background: #f9f9f9;
+}
+
+/* Hover Effect */
+.order-table tr:hover{
+  background: #e8f6f3;
+}
+
+/* ===== Total Amount ===== */
+.order-details h3{
+  text-align: right;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #111;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:768px){
+  .order-details{
+    width: 95%;
+    padding: 20px;
+  }
+
+  .order-table th,
+  .order-table td{
+    font-size: 14px;
+    padding: 8px;
+
+  }
+
+  .order-details h2{
+    font-size: 22px;
+  }
+
+  .order-details h3{
+    font-size: 18px;
+  }
+  footer {
+    font-size: 15px;
+  }
+}
