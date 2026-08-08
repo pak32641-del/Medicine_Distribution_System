@@ -1,0 +1,90 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#f2f7fa;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.auth-container{
+  background:white;
+  width:400px;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 0 15px rgba(0,0,0,0.2);
+  text-align:center;
+}
+
+.auth-container h2{
+  margin-bottom:20px;
+  color:#009688;
+}
+
+.auth-container p{
+  margin-bottom:10px;
+  color:#009688;
+  font-weight:bold;
+}
+
+.auth-container form{
+  width:100%;
+}
+
+.auth-container input{
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border-radius:6px;
+  border:1px solid #ccc;
+  outline:none;
+  font-size:14px;
+}
+
+.auth-container input:focus{
+  border-color:#009688;
+}
+
+.auth-container button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:6px;
+  background:#009688;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+.auth-container button:hover{
+  background:#027569;
+}
+
+.auth-links{
+  margin-top:15px;
+}
+
+.auth-links a{
+  text-decoration:none;
+  color:#009688;
+  font-weight:bold;
+  font-size: 16px;
+}
+
+.auth-links a:hover{
+  text-decoration:underline;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:480px){
+  .auth-container{
+    width:90%;
+  }
+}

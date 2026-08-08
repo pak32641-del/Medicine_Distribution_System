@@ -1,0 +1,180 @@
+/* ======== GENERAL PAGE LAYOUT ======== */
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f4f7fb;
+  color:#333;
+  
+}
+
+.main-content{
+  width:85%;
+  padding:30px;
+  flex-grow: 1;
+margin-left: 65px;
+}
+
+/* ======== TOPBAR ======== */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:white;
+  color:#009688;
+  padding:15px 20px;
+  border-radius:8px;
+  margin-bottom:20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  
+}
+
+.topbar h2{
+  margin:0;
+  font-size:22px;
+  letter-spacing:.5px;
+}
+
+.topbar button{
+  background:#009688;
+  color:white;
+  border:0;
+  padding:8px 16px;
+  border-radius:6px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+  margin-left: 40%;
+}
+
+.topbar button:hover{
+  background:#e0f2f1;
+}
+
+/* ======== CARDS ======== */
+.card{
+  background:white;
+  padding:18px;
+  border-radius:10px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  margin-bottom:20px;
+  text-align: left;
+  line-height: 0.8;
+  margin-top: 15px;
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3{
+  margin-top:0;
+  color:#009688;
+  border-bottom:2px solid #e0f2f1;
+  padding-bottom:6px;
+}
+
+
+/* ====== REPORT SUMMARY ====== */
+.report-summary{
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  margin-bottom:20px;
+}
+
+.report-summary p{
+  font-size:16px;
+  margin:6px 0;
+}
+
+/* ======== STATUS BADGES ======== */
+.status{
+  padding:6px 10px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:bold;
+  color:white;
+}
+
+.pending{
+  background:#ff9800;
+}
+
+.completed{
+  background:#4caf50;
+}
+
+.cancelled{
+  background:#f44336;
+}
+
+/* ======== TABLE ======== */
+.data-table{
+  width:100%;
+  border-collapse:collapse;
+  background:white;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  
+}
+
+.data-table th{
+  background:#009688;
+  color:white;
+  padding:12px;
+  font-size:14px;
+  text-align:center;
+}
+
+.data-table td{
+  padding:12px;
+  border-bottom:1px solid #e6e6e6;
+  text-align:center;
+}
+
+.data-table tr:hover{
+  background:#f1f9f8;
+}
+
+/* ===== VIEW BUTTON ===== */
+.view-btn{
+  background:#009688;
+  color:white;
+  padding:6px 12px;
+  border-radius:5px;
+  text-decoration:none;
+  font-size:13px;
+}
+
+.view-btn:hover{
+  background:#027368;
+}
+
+/* ===== PRINT STYLING ===== */
+@media print{
+
+  .topbar button{
+    display:none;
+  }
+
+  body{
+    background:white;
+  }
+
+  .card,
+  .data-table,
+  .report-summary{
+    box-shadow:none;
+    border:1px solid #ccc;
+  }
+}
+
+
+
+
+
+

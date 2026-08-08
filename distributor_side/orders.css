@@ -1,0 +1,160 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* ===== Main Content ===== */
+.main-content {
+  margin-left: 230px;
+  flex-grow: 1;
+  padding: 20px 30px;
+  overflow-x: auto;
+}
+
+/* ===== Top Bar ===== */
+.topbar {
+  background: white;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+
+.topbar h2 {
+  color: #009688;
+}
+
+/* ===== Table ===== */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  table-layout: auto; /* Flexible column widths */
+}
+
+.data-table th, .data-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  font-size: 13px;
+  vertical-align: middle;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal; /* allow wrapping */
+}
+
+.data-table th {
+  background: #009688;
+  color: white;
+  font-size: 15px;
+}
+
+.data-table tr:hover {
+  background: #f1f1f1;
+}
+
+/* ===== Status Dropdown ===== */
+.data-table select {
+  padding: 5px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* ===== Buttons ===== */
+.data-table td .view-btn,
+.data-table td .delete-btn,
+.data-table td .print-btn {
+  display: inline-block;
+  margin: 2px 3px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 13px;
+  white-space: nowrap; /* keep in one line */
+}
+
+.view-btn {
+  background: #2196f3;
+  color: white;
+}
+
+.delete-btn {
+  background: #e53935;
+  color: white;
+}
+
+.print-btn {
+  background: #3f51b5;
+  color: white;
+}
+
+.view-btn:hover { background: #1976d2; }
+.delete-btn:hover { background: #c62828; }
+.print-btn:hover { background: #303f9f; }
+
+/* ===== Ensure buttons in same row ===== */
+.data-table td:nth-last-child(-n+3) {
+  white-space: nowrap; /* last 3 columns keep buttons in single line */
+}
+
+/* ===== Responsive Table ===== */
+@media (max-width: 900px) {
+  .data-table {
+    min-width: 700px;
+  }
+}
+
+@media(max-width:768px){
+  .sidebar{
+    width:190px;
+  }
+  .main-content{
+    margin-left:190px;
+  }
+}
+
+@media(max-width:600px){
+  .sidebar{
+    width:160px;
+  }
+  .main-content{
+    margin-left:160px;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .sidebar, .topbar, .view-btn, .delete-btn, .print-btn {
+    display: none !important;
+  }
+
+  .main-content {
+    margin: 0;
+    padding: 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table th, table td {
+    border: 1px solid #000;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}

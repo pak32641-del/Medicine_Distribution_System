@@ -1,0 +1,174 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* ===== Main Content ===== */
+.main-content {
+  margin-left: 230px;
+  flex-grow: 1;
+  padding: 20px 30px;
+  transition: margin-left 0.3s ease;
+}
+
+/* ===== Top Bar ===== */
+.topbar {
+  background: white;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+
+.topbar h2 {
+  color: #009688;
+}
+
+/* ===== Dashboard Cards ===== */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  text-align: center;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #009688;
+  font-size: 26px;
+}
+
+.card p {
+  color: #666;
+}
+
+/* ===== Tables ===== */
+.table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+th {
+  background: #009688;
+  color: #fff;
+}
+
+tr:hover {
+  background: #f0faf9;
+}
+
+/* ===== Forms ===== */
+.card input,
+.card select,
+.card textarea {
+  width: 100%;
+  padding: 8px 12px;
+  margin: 6px 0 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.card button {
+  background: #009688;
+  color: #fff;
+  padding: 9px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: #00796b;
+}
+
+/* =============================================
+   RESPONSIVE
+============================================= */
+@media (max-width: 768px) {
+
+  /* Main content full width on mobile */
+  .main-content {
+    margin-left: 0;
+    padding: 65px 15px 20px; /* top padding for hamburger button */
+  }
+
+  /* Cards stack to 2 columns on tablet */
+  .dashboard-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .card {
+    padding: 18px 12px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .topbar {
+    margin-bottom: 20px;
+  }
+
+  .topbar h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Cards single column on small mobile */
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card h3 {
+    font-size: 22px;
+  }
+
+  th, td {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+</style>
